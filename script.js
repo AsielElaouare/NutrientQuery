@@ -80,7 +80,7 @@ function updateTableOfContent(result){
             data.addColumn('number', 'Slices');
             data.addRows([
               ['Calories', totalCalories],
-              ['Total Fat', totalFat],
+              ['Fat', totalFat],
               ['Cholesterol', totalColesterol],
               ['Sodium', totalSodium],
               ['Carbohydrates', totalCarbs],
