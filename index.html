@@ -6,20 +6,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./type-placeholder.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Nutrition Facts</title>
 </head>
 <body>
     <div class="container rounded flex-column mt-5 p-5 bg-gray">
         <h1 class="text-center">Free Nutrition Facts</h1>
+        <p>Enter the food or drink you want to know about in the box (required). If you want to be specific about how much, you can add a number before the item, like '3 tomatoes' or '1lb beef brisket.' If you don't mention a quantity, it will assume 100 grams by default. Just keep in mind that your entry can't be longer than 1500 characters.</p>
         <hr>
-        <input id="foodInput" class="form-control form-control-lg m-1" type="text" placeholder="yesterday i ate tomato, nutella and pizza">
+        <input id="foodInput" class="form-control form-control-lg m-1" type="text">
         <div class="text-center">
             <button id="getNutritionBtn" type="button" class="btn btn-success m-3">Get Nutrition Facts</button>
         </div>
     </div>
 
-    <div class="container-sm mt-5">
+    <div class="container-sm mt-5 flex-column" id="hidden">
         <hr>
         <h2 class="text-center p-1">Nutrition Results</h2>
         <table id="nutritionTable" class="table table-striped">
@@ -42,12 +44,12 @@
                 
             </tbody>
         </table>
-        <div id="chart_div" class="text-center mt-5"></div>
+        <div id="chart_div" class="mt-5 mx-auto"></div>
+
     </div>
-
-    
-
-
+    <div id="product_not_found" class="container mx-auto mt-5">
+        <h2 class="text-color text-center">It seems that this product is not in our Data Base. Please try a different product.</h2>
+    </div>
     <script src="./script.js"></script>
     <script src="./api-key.js"></script>
 </body>

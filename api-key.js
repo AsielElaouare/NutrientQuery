@@ -1,5 +1,15 @@
 $(document).ready( function(){
     $('#getNutritionBtn').on('click', function(){
+        function checkReturnedItems(result){
+            if(Object.keys(result.items).length >= 1){
+                $('#hidden').show();
+                $('#product_not_found').hide();
+
+            }else if(Object.keys(result.items).length == 0){
+                $('#hidden').hide();
+                $('#product_not_found').show();
+            }
+        }
 
         var query = $('#foodInput').val();
         $.ajax({
@@ -9,6 +19,7 @@ $(document).ready( function(){
             contentType: 'application/json',
             success: function(result) {
                 console.log(result);
+                checkReturnedItems(result);
                 updateTableOfContent(result);
             },
             error: function ajaxError(jqXHR) {

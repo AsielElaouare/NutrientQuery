@@ -1,6 +1,57 @@
+$('#hidden').hide();
+$('#product_not_found').hide();
+
+
+
+
+
+
+$("#foodInput").typePlaceholder({
+  speed: 100,
+  delay: 2000,
+  keywords: [
+    "Yesterday I ate 25g nutella and 400g pizza",
+    "Doritos",
+    "250g Beef",
+    "1kg potatoes"
+  ],
+});
+
 function updateTableOfContent(result){
-        // Clear existing table rows
         $('#result').empty()
+
+        let totalGrams = 0;
+        let totalCalories = 0;
+        let totalFat = 0;
+        let totalColesterol = 0;
+        let totalSodium = 0;
+        let totalCarbs = 0;
+        let totalFiber = 0;
+        let totalSugar = 0;
+        let totalProtein = 0;
+        
+        result.items.forEach(element => {
+            const servingSize = parseFloat(element.serving_size_g);
+            const calories = parseFloat(element.calories);
+            const fat = parseFloat(element.fat_total_g);
+            const cholesterol = parseFloat(element.cholesterol_mg);
+            const sodium = parseFloat(element.sodium_mg);
+            const carbs = parseFloat(element.carbohydrates_total_g);
+            const fiber = parseFloat(element.fiber_g);
+            const sugar = parseFloat(element.sugar_g);
+            const protein = parseFloat(element.protein_g);
+        
+            totalGrams += servingSize;
+            totalCalories += calories;
+            totalFat += fat;
+            totalColesterol += cholesterol;
+            totalSodium += sodium;
+            totalCarbs += carbs;
+            totalFiber += fiber;
+            totalSugar += sugar;
+            totalProtein += protein;
+        });
+
         result.items.forEach(element => {
             $('#result').append(
                 '<tr>' +
@@ -28,17 +79,17 @@ function updateTableOfContent(result){
             data.addColumn('string', 'Topping');
             data.addColumn('number', 'Slices');
             data.addRows([
-              ['Calories', element.calories],
-              ['Total Fat', element.fat_total_g],
-              ['Cholesterol', element.cholesterol_mg],
-              ['Sodium', element.sodium_mg],
-              ['Carbohydrates', element.carbohydrates_total_g],
-              ['Fiber', element.fiber_g],
-              ['Sugar', element.sugar_g],
-              ['Protein', element.protein_g],
+              ['Calories', totalCalories],
+              ['Total Fat', totalFat],
+              ['Cholesterol', totalColesterol],
+              ['Sodium', totalSodium],
+              ['Carbohydrates', totalCarbs],
+              ['Fiber', totalFiber],
+              ['Sugar', totalSugar],
+              ['Protein', totalProtein],
             ]);
             
-          var options = {'title':'Amount of nutrients in '+ element.name, 'width':1000,'height':500};
+          var options = {};
             
             
           var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
