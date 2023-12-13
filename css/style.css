@@ -3,6 +3,12 @@ body {
     display: flex;
     flex-direction: column;
   }
+
+  .input-placeholder::placeholder{
+    color: #19875456;
+  }
+  
+
 .bg-gray{
     background-color: rgba(217, 213, 213, 0.182);
 }
