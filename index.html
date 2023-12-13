@@ -12,7 +12,8 @@
     <title>Nutrition Facts</title>
 </head>
 <body>
-    <div class="container rounded flex-column mt-5 p-5 bg-gray">
+
+    <div class="container rounded flex-column mt-5 p-5 bg-gray banner">
         <h1 class="text-center">Free Nutrition Facts</h1>
         <p>Enter the food or drink you want to know about in the box (required). If you want to be specific about how much, you can add a number before the item, like '3 tomatoes' or '1lb beef brisket.' If you don't mention a quantity, it will assume 100 grams by default. Just keep in mind that your entry can't be longer than 1500 characters.</p>
         <hr>
@@ -20,41 +21,52 @@
         <div class="text-center">
             <button id="getNutritionBtn" type="button" class="btn btn-success m-3">Get Nutrition Facts</button>
         </div>
+        <div id="product_not_found" class="container mx-auto mt-5">
+            <h2 class="text-color text-center">It seems that this product is not in our Data Base. Please try a different product.</h2>
+        </div>
     </div>
-
     <div class="container-sm mt-5 flex-column" id="hidden">
-        <hr>
         <h2 class="text-center p-1">Nutrition Results</h2>
-        <table id="nutritionTable" class="table table-striped table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Serving Size</th>
-                    <th scope="col">Calories</th>
-                    <th scope="col">Total Fat</th>
-                    <th scope="col">Saturated Fat</th>
-                    <th scope="col">Cholesterol</th>
-                    <th scope="col">Sodium</th>
-                    <th scope="col">Carbohydrates</th>
-                    <th scope="col">Fiber</th>
-                    <th scope="col">Sugar</th>
-                    <th scope="col">Protein</th>
-                  </tr>
-            </thead>
-            <tbody id="result">
-                
-            </tbody>
-        </table>
-        <br>
-        <br>
         <hr>
-        <h3 class="text-center mt-5">This chart represents the total of values of all products combined</h3>
-        <div id="chart_div" class="mt-5 mx-auto"></div>
+        <div class="table-responsive-md">
+            <table id="nutritionTable" class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Serving Size</th>
+                        <th scope="col">Calories</th>
+                        <th scope="col">Total Fat</th>
+                        <th scope="col">Saturated Fat</th>
+                        <th scope="col">Cholesterol</th>
+                        <th scope="col">Sodium</th>
+                        <th scope="col">Carbohydrates</th>
+                        <th scope="col">Fiber</th>
+                        <th scope="col">Sugar</th>
+                        <th scope="col">Protein</th>
+                      </tr>
+                </thead>
+                <tbody id="result"></tbody>
+            </table>          
+        </div>
+        <br>
+        <br>
+        <h3 class="text-center p-1 mt-5">This chart represents the total of values of all products combined</h3>
+        <hr>
+        <div id="chart_div" class="mt-5 mx-auto  container-fluid"></div>
 
     </div>
-    <div id="product_not_found" class="container mx-auto mt-5">
-        <h2 class="text-color text-center">It seems that this product is not in our Data Base. Please try a different product.</h2>
-    </div>
+
+
+   
+
+    <footer class="bg-body-tertiary text-center text-lg-start ">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2023 Copyright: Asiel Elaouare All Rights Reserved
+          <a class="text-body" href="https://mdbootstrap.com/"> GitHub</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
     <script src="./script.js"></script>
     <script src="./api-key.js"></script>
 </body>
