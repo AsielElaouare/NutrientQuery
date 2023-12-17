@@ -1,10 +1,17 @@
 $('#hidden').hide();
 $('#product_not_found').hide();
 
+function checkReturnedItems(result){
+  if(Object.keys(result.items).length >= 1){
+      $('#hidden').show();
+      $('#product_not_found').hide();
 
-
-
-
+  }
+  else if(Object.keys(result.items).length == 0){
+      $('#hidden').hide();
+      $('#product_not_found').show();
+  }
+}
 
 $("#foodInput").typePlaceholder({
   speed: 100,
@@ -93,21 +100,8 @@ function updateTableOfContent(result){
             
             
           var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-          chart.draw(data, options)
-
-          
-          
+          chart.draw(data, options)  
         }
             
-        });
-    };
-        
-
-
-
-
-
-
-
-
-
+    });
+};
