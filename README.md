@@ -5,6 +5,14 @@
 NutrientQuery is a user-friendly web application designed to fetch and display nutrition information based on user-inputted food items. 
 Whether you're managing your diet, exploring new foods, or simply curious about the nutrient composition of what you eat, NutrientQuery is your go-to resource.
 
+<hr>
+
+Visit NutrientQuery here: https://nutrient-query.netlify.app/
+
+<hr>
+
+
+
 ## Features
 Nutrient Information: Obtain detailed information about the nutrient content of a wide variety of foods.
 User-Friendly Interface: A clean and intuitive interface for seamless user interaction.
