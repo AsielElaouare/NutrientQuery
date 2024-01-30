@@ -27,3 +27,15 @@ footer {
     margin-top: auto;
   }
 
+.img-banner{
+  max-width: 50%;
+  height: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .img-banner{
+    max-width: 80%;
+    height: auto;
+  }
+  
+}

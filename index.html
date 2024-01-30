@@ -9,6 +9,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/type-placeholder.js"></script>
+    <script src="https://kit.fontawesome.com/4c23360f25.js" crossorigin="anonymous"></script>
     <title>NutrientQuery</title>
 </head>
 <body>
@@ -34,14 +35,14 @@
                         <th scope="col">Name</th>
                         <th scope="col">Serving Size (g)</th>
                         <th scope="col">Calories</th>
-                        <th scope="col">Total Fat</th>
-                        <th scope="col">Saturated Fat</th>
-                        <th scope="col">Cholesterol</th>
-                        <th scope="col">Sodium</th>
-                        <th scope="col">Carbohydrates</th>
-                        <th scope="col">Fiber</th>
-                        <th scope="col">Sugar</th>
-                        <th scope="col">Protein</th>   
+                        <th scope="col">Total Fat (g)</th>
+                        <th scope="col">Saturated Fat (g)</th>
+                        <th scope="col">Cholesterol (mg)</th>
+                        <th scope="col">Sodium (mg)</th>
+                        <th scope="col">Carbohydrates (g)</th>
+                        <th scope="col">Fiber (g)</th>
+                        <th scope="col">Sugar (g)</th>
+                        <th scope="col">Protein (g)</th>   
                       </tr>
                 </thead>
                 <tbody id="result"></tbody>
@@ -53,10 +54,19 @@
         <hr>
         <div id="chart_div" class="mt-5 mx-auto  container-fluid"></div>
     </div>
-    <footer class="bg-body-tertiary text-center text-lg-start ">
+    <div id="container-img" class="text-center">
+        <img class="img-fluid img-banner m-5 p-5" src="./css/images/NutrientQuery-Banner.svg" height="auto" alt="">
+    </div>
+    
+    <footer class="bg-body-tertiary text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2023 Copyright: Asiel Elaouare All Rights Reserved
-          <a class="text-body" href="https://github.com/AsielElaouare"> GitHub</a>
+          © 2024 Copyright | Asiel Elaouare All Rights Reserved.
+          <ul class="m-2 list-unstyled ">
+            <li>
+                <i class="fa-brands fa-github"></i>
+                <a class="text-body" href="https://github.com/AsielElaouare/NutrientQuery"  target="_blank" > GitHub</a>
+            </li>
+          </ul>
         </div>
       </footer>
     <script src="./js/script.js"></script>
