@@ -32,10 +32,25 @@ footer {
   height: auto;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
   .img-banner{
     max-width: 80%;
     height: auto;
   }
+  
+}
+
+@media only screen and (min-width: 1600px) {
+  .img-banner{
+    max-width: 40%;
+    height: auto;
+  }
+  
+}
+
+.paragraph-instructions{
+  width: 400px;
+  height: auto;
+  font-size: 1.5rem;
   
 }

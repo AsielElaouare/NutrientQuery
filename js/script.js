@@ -1,15 +1,19 @@
 $('#hidden').hide();
 $('#product_not_found').hide();
 
+
 function checkReturnedItems(result){
   if(Object.keys(result.items).length >= 1){
       $('#hidden').show();
       $('#product_not_found').hide();
+      $('#container-img').hide();
 
   }
   else if(Object.keys(result.items).length == 0){
       $('#hidden').hide();
       $('#product_not_found').show();
+      $('#container-img').show();
+
   }
 }
 
@@ -96,7 +100,7 @@ function updateTableOfContent(result){
               ['Protein', totalProtein],
             ]);
             
-          var options = {};
+          var options = {'width':'auto', 'height':'auto'};
             
             
           var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
