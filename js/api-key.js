@@ -1,13 +1,6 @@
-require('dotenv').config(); 
+require('dotenv').config(); // Load dotenv if using Node.js and dotenv
 const $ = require('jquery');
-const envPath = path.resolve(__dirname, '././.env');
 
-const result = dotenv.config({ path: envPath });
-
-if (result.error) {
-    console.error(result.error);
-    throw result.error;
-}
 $(document).ready(function(){
     $('#getNutritionBtn').on('click', function(){
         var query = $('#foodInput').val();
