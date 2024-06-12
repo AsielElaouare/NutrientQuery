@@ -1,12 +1,13 @@
 require('dotenv').config(); // Load dotenv if using Node.js and dotenv
 const $ = require('jquery');
+
 $(document).ready(function(){
     $('#getNutritionBtn').on('click', function(){
         var query = $('#foodInput').val();
-        var apiKey = process.env.API_KEY; // Retrieve API key from environment variable
+        var apiKey = process.env.API_KEY; 
 
-        // Construct the API URL properly
-        var apiUrl = 'https://api.example.com/endpoint?key='+ query;
+        
+        var apiUrl = 'https://api.calorieninjas.com/v1/nutrition?query='+ query;
 
         $.ajax({
             method: 'GET',
