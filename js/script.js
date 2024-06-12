@@ -1,5 +1,6 @@
 $('#hidden').hide();
 $('#product_not_found').hide();
+const $ = require('jquery');
 
 
 function checkReturnedItems(result){

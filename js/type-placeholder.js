@@ -1,3 +1,5 @@
+const $ = require('jquery');
+
 (function ($) {
     var isInternetExplorer;
     $.fn.typePlaceholder = function (option) {
